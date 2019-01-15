@@ -1,0 +1,24 @@
+function fpb(angka1, angka2) {
+  var maxNumber = Math.max(angka1, angka2);
+  var result = [];
+  for(var i = 0; i < maxNumber; i++) {
+  	if(angka1 % i === 0 && angka2 % i === 0) {
+  		result.push(i);
+  	}
+  }
+
+  var highNumber = result[0];
+  for(var j = 1; j < result.length; j++) {
+  	if(result[j] > highNumber) {
+  		highNumber = result[j];
+  	}
+  }
+  return highNumber;
+}
+
+// TEST CASES
+console.log(fpb(12, 16));
+console.log(fpb(50, 40));
+console.log(fpb(22, 99));
+console.log(fpb(24, 36));
+console.log(fpb(17, 23));
