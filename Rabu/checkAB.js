@@ -10,7 +10,7 @@ function checkAB(num) {
   		indexB.push(i);
   	}
   }
-  
+
   for(let j = 0; j < indexA.length; j++) {
   	for(let k = 0; k < indexB.length; k++) {
   		jarak.push(Math.abs(indexA[j] - indexB[k]));
@@ -36,5 +36,5 @@ function checkAB(num) {
 console.log(checkAB('lane borrowed')); // true
 console.log(checkAB('i am sick')); // false
 console.log(checkAB('you are boring')); // true
-console.log(checkAB('barraian')); // true
+console.log(checkAB('barbarian')); // true
 console.log(checkAB('bacon and meat')); // false
