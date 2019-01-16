@@ -6,7 +6,11 @@ function ubahHuruf(kata) {
     for(let j = 0; j < allAbjad.length; j++) {
       if(kata[i] === allAbjad[j]) {
         nextIndex = j + 1;
-        result += allAbjad[nextIndex];
+        if(allAbjad[nextIndex] === undefined) {
+          result += allAbjad[0];
+        } else {
+          result += allAbjad[nextIndex];
+        }
       }
     }
   }
@@ -29,7 +33,11 @@ console.log(ubahHuruf('semangat')); // tfnbohbu
 //     for(let j = 0; j < allAbjad.length; j++) {
 //       if(array[i] === allAbjad[j]) {
 //         var nextIndex = j + 1;
-//         result.push(allAbjad[nextIndex]);
+           // if(allAbjad[nextIndex] === undefined){
+           //  result.push(allAbjad[0])
+           // } else{
+//            result.push(allAbjad[nextIndex]);
+           // }
 //       }
 //     }
 //   }
