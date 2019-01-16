@@ -1,28 +1,34 @@
 function checkAB(num) {
   var indexA = [];
   var indexB = [];
-  var jarak = 0;
+  var jarak = [];
   for(let i = 0; i < num.length; i++) {
   	if(num[i] === 'a') {
   		indexA.push(i);
   	}
-  	
-  	if (num[i] === 'b') {
+   	else if (num[i] === 'b') {
   		indexB.push(i);
   	}
   }
-  // console.log(indexA);
-  // console.log(indexB);
-
+  
   for(let j = 0; j < indexA.length; j++) {
   	for(let k = 0; k < indexB.length; k++) {
-  		jarak = Math.abs(indexA[j] - indexB[k]);
+  		jarak.push(Math.abs(indexA[j] - indexB[k]));
   	}
-  	if(jarak === 4) {
-  		return true
-  	} else {
-  		return false
+  }
+
+  var cek = false
+  for(let l = 0; l < jarak.length; l++) {
+  	if(jarak[l] === 4) {
+  		cek = true;
   	}
+  }
+
+  if(cek === true) {
+  	return true;
+  }
+  else {
+  	return false;
   }
 }
 
@@ -30,5 +36,5 @@ function checkAB(num) {
 console.log(checkAB('lane borrowed')); // true
 console.log(checkAB('i am sick')); // false
 console.log(checkAB('you are boring')); // true
-console.log(checkAB('barbarian')); // true
+console.log(checkAB('barraian')); // true
 console.log(checkAB('bacon and meat')); // false
