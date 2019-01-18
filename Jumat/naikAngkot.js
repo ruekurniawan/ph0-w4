@@ -19,7 +19,7 @@ function naikAngkot(arrPenumpang) {
   			posisiAkhir = j;
   		}
   	}
-  	obj.bayar = Math.round(posisiAkhir - posisiAwal) * 2000;
+  	obj.bayar = Math.abs(posisiAkhir - posisiAwal) * 2000;
   	result.push(obj);
   }
 
